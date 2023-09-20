@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: pink; }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+<div class="container rating">
+
+  <img src="images/icon-star.svg" alt="" class="star">
+
+  <h1>How did we do?</h1>
+
+  <p>
+    Please let us know how we did with your support request. All feedback is appreciated
+    to help us improve our offering!
+  </p>
+
+  <div class="set">
+    <button class="drum" id="hit1" value=1>1</button>
+    <button class="drum" id="hit2" value=2>2</button>
+    <button class="drum" id="hit3" value=3>3</button>
+    <button class="drum" id="hit4" value=4>4</button>
+    <button class="drum" id="hit5" value=5>5</button>
+  </div>
+
+  <button class="btn">Submit</button>
+  <div id="popup"></div>
+
+</div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+<div class="container thank-you">
+
+  <img src="images/illustration-thank-you.svg" alt="Thank you image">
+
+  <p><span class="star">
+    You selected <span id="summup"></span> out of 5
+  </span></p>
+
+  <h1>Thank you!</h1>
+
+  <p>We appreciate you taking the time to give a rating. If you ever need more support,
+    don’t hesitate to get in touch!</p>
+
+</div>
+  <!-- Thank you state end -->
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Annie Wan</a>.
+  </footer>
+
+
+
+  <script type="text/javascript" defer>
+    var RATING = 0;
+
+    const drums = document.querySelectorAll (".drum");
+    drums.forEach((item) => {
+      item.addEventListener("click", () => {
+        if ( RATING ) {
+          document.getElementById("hit" + RATING).classList.remove("selected", "checked");
+        }
+        RATING = item.value;
+        document.getElementById("hit" + RATING).classList.add("selected", "checked");
+      });
+    });
+
+    const summup = document.querySelector(".btn");
+    summup.addEventListener ("click", () => {
+      if ( RATING ) {
+        document.getElementById("summup").innerHTML = RATING;
+        document.querySelector(".rating").style.display = "none";
+        document.querySelector(".thank-you").style.display = "block";
+      }
+      else {
+        alert ("Please, select a number rating.");
+      }
+    });
+
+  </script>
+</body>
+</html>
