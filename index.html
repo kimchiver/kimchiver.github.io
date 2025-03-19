@@ -3,10 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Kimchiver's Portfolio</title>
+  <title>Kimchiver's Page</title>
 
   <style media="screen">
-    body {background: white;margin: 0;padding: 2% 20%;}.page {padding: 64px 40px 88px;box-shadow: 1px 2px 2px hsla(360, 90%, 50%, 0.1);}
+    body {
+      background: white;
+      max-width: 64rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      margin: 0 auto;
+      padding: 2% 20%;
+    }
+    .page {
+      padding: 3rem 2.5rem 5.25rem;
+      border: 1px solid hsla(360, 90%, 50%, 0.1);
+      border-radius: 0.5rem;
+      box-shadow: 2px 2px 3px hsla(360, 90%, 50%, 0.1);}
+
+    .subtitle {}
+    .footer {
+      display: flex;
+      gap: 1rem;
+    }
   </style>
 </head>
 
@@ -14,21 +32,57 @@
 
   <div class="page">
 
-  <h1>Kimchiver's Portfolio</h1>
-  <h3>I'm a big fan of k-dramas, excellent food, rooftop-chatting and js scripting.</h3>
+  <h1>Kimchiver's Page</h1>
+  <p>I have a deep love for K-dramas that keep me hooked, delicious food that brings joy,
+    late-night rooftop chats filled with meaningful conversations,
+    and the endless possibilities of JavaScript scripting.</p>
   <hr />
   <h2>Recent Projects</h2>
-    <p>Project 1 preview</p>
-  <img src="./images/screen-a.png" width="72" height="72" alt=" project preview"/>
+  <ul class="list">
+   <li>
+      <p>Endless expenses</p>
+      <img src="/public/images/broken-image.gif" height="32" alt="first project preview"/>
+    </li>
+    <li>
+       <p>Space tourism website</p>
+       <img src="/public/images/broken-image.gif" height="32" alt="second project preview"/>
+     </li>
+     <li>
+        <p>Sky Skills Navigator</p>
+        <img src="/public/images/broken-image.gif" height="32" alt="third project preview"/>
+      </li>
+  </ul>
 
 
   <h2>Old Projects</h2>
-    <p>Project 1 preview</p>
-  <img src="images/screen-b.png" width="72" height="72" alt=" project preview"/>
+
+  <ul class="list">
+   <li>
+      <p class="subtitle">devfinder</p>
+      <img src="/public/images/broken-image.gif" height="32" alt="first project preview"/>
+    </li>
+    <li>
+       <p class="subtitle">Planet fact Book</p>
+       <img src="/public/images/broken-image.gif" height="32" alt="first project preview"/>
+     </li>
+     <li>
+        <p class="subtitle">Mondrian's "neoplasticismo"</p>
+        <img src="/public/images/broken-image.gif" height="32" alt="first project preview"/>
+      </li>
+      <li>
+         <p class="subtitle">Bandname generator</p>
+         <img src="/public/images/broken-image.gif" height="32" alt="first project preview"/>
+       </li>
+  </ul>
+
 
   <hr />
-  <a href="./about.html">About Me</a>
-  <a href="./contact.html">Contact Me</a>
+
+  <div class="footer">
+    <div>&#91; About Me &#93; </div>
+    <div>&#91; Contact Me &#93;</div>
+  </div>
+
 
 </div>
 
